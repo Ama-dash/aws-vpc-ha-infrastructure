@@ -61,29 +61,27 @@ This project demonstrates the deployment of a secure, scalable, and highly avail
 ## 🚀 Deployment Steps (Manual Deployment)
 
 ```bash
-# 1. Clone the Repository
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
 
-# 2. Launch an EC2 Instance
+
+# 1. Launch an EC2 Instance
 # - Select Amazon Linux / Ubuntu
 # - Choose t2.micro (Free tier eligible)
 # - Create/Select Key Pair and Security Group (Allow SSH + HTTP)
 
-# 3. Connect to Your EC2 Instance
+# 2. Connect to Your EC2 Instance
 ssh -i your-key.pem ubuntu@your-ec2-public-ip
 
-# 4. Install Required Packages
+# 3. Install Required Packages
 sudo apt update -y
 sudo apt install -y python3 python3-pip
 
-# 5. Upload Your Project Files (From Local Machine)
+# 4. Upload Your Project Files (From Local Machine)
 scp -i your-key.pem -r . ubuntu@your-ec2-public-ip:/home/ubuntu
 
-# 6. Run the Web Server
+# 5. Run the Web Server
 python3 -m http.server 8000
 
-# 7. Open Browser to Access Application
+# 6. Open Browser to Access Application
 http://your-ec2-public-ip:8000
 
 
