@@ -57,74 +57,33 @@ This project demonstrates the deployment of a secure, scalable, and highly avail
 ## 🖼 Architecture Diagram
 <img width="253" height="199" alt="image" src="https://github.com/user-attachments/assets/7d2d4e78-9e1b-4cc2-a57e-72d9ab1a7097" />
 
-🌐 Traffic Flow Summary
-Client → ALB (Public Subnet) → EC2 Servers (Private Subnets)
-                ↑
-             NAT GW → Internet (for updates only)
-                ↑
-         Bastion Host (SSH access)
 
+## 🚀 Deployment Steps (Manual Deployment)
 
-## 🚀 How to Deploy
-🚀 How to Deploy
-1️⃣ Create the Network
+```bash
+# 1. Clone the Repository
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
 
-Create a VPC
+# 2. Launch an EC2 Instance
+# - Select Amazon Linux / Ubuntu
+# - Choose t2.micro (Free tier eligible)
+# - Create/Select Key Pair and Security Group (Allow SSH + HTTP)
 
-Create 2 Public Subnets and 2 Private Subnets
+# 3. Connect to Your EC2 Instance
+ssh -i your-key.pem ubuntu@your-ec2-public-ip
 
-Attach Internet Gateway
+# 4. Install Required Packages
+sudo apt update -y
+sudo apt install -y python3 python3-pip
 
-Create:
+# 5. Upload Your Project Files (From Local Machine)
+scp -i your-key.pem -r . ubuntu@your-ec2-public-ip:/home/ubuntu
 
-Public Route Table → Route to Internet Gateway
+# 6. Run the Web Server
+python3 -m http.server 8000
 
-Private Route Table → Route to NAT Gateways
-
-Deploy NAT Gateways (one per AZ for high availability)
-
-2️⃣ Launch Bastion Host
-
-Create EC2 instance in Public Subnet
-
-Allow SSH only from your IP
-
-Connect:
-
-ssh -i aws_login.pem ubuntu@<BASTION_PUBLIC_IP>
-
-3️⃣ Launch Private EC2 Instances
-
-Launch into Private Subnets
-
-No Public IP assigned
-
-Security Group allows SSH only from Bastion SG
-
-4️⃣ SSH into Private EC2 via Bastion
-
-From local machine:
-
-ssh -i aws_login.pem -o "ProxyJump ubuntu@<BASTION_PUBLIC_IP>" ubuntu@<PRIVATE_EC2_PRIVATE_IP>
-
-
-Or from inside Bastion:
-
-chmod 400 aws_login.pem
-ssh -i aws_login.pem ubuntu@<PRIVATE_EC2_PRIVATE_IP>
-
-5️⃣ Deploy Web Page
-cd /var/www/html
-sudo vim index.html
-
-
-Example:
-
-<h1>Hello from Private EC2!</h1>
-
-6️⃣ Start Web Server
-sudo apt update
-sudo apt install nginx -y
-sudo systemctl restart nginx
+# 7. Open Browser to Access Application
+http://your-ec2-public-ip:8000
 
 
