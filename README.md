@@ -25,7 +25,7 @@ This project demonstrates the deployment of a secure, scalable, and highly avail
 ## 🎯 The 4 TOs
 
 - **TO Scale:** Auto Scaling adapts to traffic
-- 
+- <img width="1913" height="746" alt="Screenshot (870)" src="https://github.com/user-attachments/assets/af0f885c-3122-494b-b681-f955c201afcc" />
 
 - **TO Secure:** Workloads run in private subnets
 - **TO Balance:** ALB improves performance and uptime
