@@ -55,7 +55,8 @@ This project demonstrates the deployment of a secure, scalable, and highly avail
 - Route Tables & Security Groups
 
 ## 🖼 Architecture Diagram
-(Insert architecture diagram if you have one — you can ask me to create it.)
+<img width="253" height="199" alt="image" src="https://github.com/user-attachments/assets/7d2d4e78-9e1b-4cc2-a57e-72d9ab1a7097" />
+
 
 ---
 
