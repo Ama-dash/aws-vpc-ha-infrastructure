@@ -28,9 +28,20 @@ This project demonstrates the deployment of a secure, scalable, and highly avail
 ![1111](https://github.com/user-attachments/assets/77c7fc5d-19b6-435c-8b19-1b73be40f538)
 
 - **TO Secure:** Workloads run in private subnets
+- ![fff](https://github.com/user-attachments/assets/b76aa9ef-4889-4f00-a71d-855d4f1014ba)
+
+- ![sssss](https://github.com/user-attachments/assets/6b47eba2-c425-4706-a37c-2e145ea72b42)
+
+
+  
 - **TO Balance:** ALB improves performance and uptime
+   ![target](https://github.com/user-attachments/assets/912f1fa2-f760-497a-b815-972c40fa3adf)
+
+   ![load](https://github.com/user-attachments/assets/32cfc412-dfdf-4533-9334-645254aae7f7)
+
 - **TO Connect:** NAT Gateways enable controlled outbound access
   ![21](https://github.com/user-attachments/assets/8b459762-1be5-4974-87fd-ba9025e474e6)
+![31](https://github.com/user-attachments/assets/fad20d05-3229-4d08-a2af-c1cdbf9c20a6)
 
 
 ## 📦 Technologies Used
