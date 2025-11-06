@@ -27,12 +27,11 @@ This project demonstrates the deployment of a secure, scalable, and highly avail
 - **TO Scale:** Auto Scaling adapts to traffic
 ![1111](https://github.com/user-attachments/assets/77c7fc5d-19b6-435c-8b19-1b73be40f538)
 
-
-
-
 - **TO Secure:** Workloads run in private subnets
 - **TO Balance:** ALB improves performance and uptime
 - **TO Connect:** NAT Gateways enable controlled outbound access
+  ![21](https://github.com/user-attachments/assets/8b459762-1be5-4974-87fd-ba9025e474e6)
+
 
 ## 📦 Technologies Used
 
